@@ -1,0 +1,135 @@
+* The Big Coleco Adam Info-Dump
+
+** Commercials
+
+*** Stand-Alone Adam (is that Legal?)
+*** Expansion Module #3
+
+** Why?
+
+*** [[https://i.ebayimg.com/images/g/PbkAAOSwx-9in4ST/s-l1200.webp][Market to Little Billy]]
+*** Do Homework, then games.
+*** [[https://books.google.com/books?id=NbgDAAAAMBAJ&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false][$600 Target price (p. 75)]]
+**** Including a printer
+**** Why "Tape?" [[https://archive.org/details/creativecomputing-1983-01/page/n243/mode/2up][Disk drives were EXPENSIVE!]]
+
+** What is the Coleco Adam?
+
+*** [[https://lowendbox.com/wp-content/uploads/2023/07/coleco-adam-closeup.png][The Box]]
+
+**** [[https://content.invisioncic.com/r322239/gallery/album_932/gallery_34480_932_38891.jpg][Expansion Module #3]]
+*** [[https://content.invisioncic.com/r322239/monthly_2019_09/20190923_180755.jpg.377d2433e19b91009624e409c5dfe114.jpg][Inside the Box]]
+*** The Memory Console
+**** [[https://content.invisioncic.com/r322239/monthly_07_2011/post-25956-0-70461600-1309666509.jpg][Stand-Alone]]
+**** [[http://dunfield.classiccmp.org/adam/h/e3.jpg][Expansion Module #3 for ColecoVision]]
+*** [[https://content.invisioncic.com/r322239/monthly_05_2016/post-44577-0-17162700-1462626598.jpg][Keyboard]]
+
+**** Keycaps in Handel Gothic
+**** Dome switches
+**** 78 keys
+**** 6 Function Keys (I-VI)
+**** Command Keys
+
+***** ESCAPE/WP
+***** WILD CARD
+***** UNDO
+***** MOVE/COPY
+***** STORE/GET
+***** CLEAR
+***** INSERT
+***** PRINT
+***** DELETE
+
+**** Arrow Keys and Home
+*** [[https://i.ebayimg.com/images/g/QZMAAOSwzS5hnZuD/s-l1200.webp][SmartWriter Printer]]
+**** [[https://digibarn.com/collections/systems/coleco-adam/CIMG3309.JPG][The printer supplies THE POWER!]]
+
+** Turning it on
+
+*** SmartWriter (more later)
+*** Loading Buck Rogers
+*** Loading Zaxxon
+
+** SmartWriter
+
+*** Typewriter
+*** Word Processor
+*** Store/Get
+*** Editing
+*** Backup Files
+*** How many pages?
+
+** Storage
+
+*** DDPs
+
+**** block oriented
+**** 20ips search / 80ips read and write
+**** DDPs versus Standard Tapes
+**** [[http://adamarchive.org/archive/Technical/ADAM%20Mods/Audio%20Cassette%20Tape%20to%20a%20ADAM%20DDP%20Pack%21%21%20v2.2.pdf][Adapting Standard Tapes]]
+**** Using mame castool
+
+*** Disks
+*** [[http://ann.hollowdreams.com/adamsupplies.html][Hard Disk]]
+*** Comparison of capacities
+*** Filesystems
+
+**** EOS
+**** CP/M
+
+*** Modern Solutions (ADE and FujiNet)
+
+** SmartBASIC
+
+*** Lo-Res Graphics
+*** Hi-Res Graphic
+
+** SmartLOGO
+
+*** CS
+*** TO SQUARE
+
+TO SQUARE
+REPEAT 4 [ FD 100 RT 90 ]
+END
+
+*** TO STAR
+
+TO STAR
+REPEAT 30 [ SQUARE RT 12 ]
+END
+
+*** TO CIRCLE
+
+TO CIRCLE
+REPEAT 360 [ RT 1 FD 1 ]
+END
+
+** Productivity Apps
+
+*** AdamCalc
+*** Recipe Filer
+*** SmartFiler
+*** Smart Letters and Forms
+
+** Educational Software
+
+*** Electronic Flashcard Maker
+*** ExperType
+
+** Comparing Games against Super Games
+
+*** Buck Rogers: Planet of Zoom
+*** Donkey Kong
+*** Donkey Kong Jr.
+*** Zaxxon
+
+** ColecoVision Games
+
+*** TODO ADD GAMES
+
+** CP/M and TDOS
+
+*** Booting
+*** Virtual Screen
+*** Even from DDP
