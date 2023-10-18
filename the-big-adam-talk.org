@@ -267,6 +267,7 @@
 ** SmartLOGO
 
 *** CS
+
 *** TO SQUARE
 
 #+begin_src logo
@@ -311,8 +312,6 @@ END
 *** Zaxxon
 
 ** ColecoVision Games
-
-*** TODO ADD GAMES
 
 ** CP/M and TDOS
 
