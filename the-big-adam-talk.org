@@ -126,7 +126,7 @@
 
 *** Lo-Res Graphics
 
-```basic
+#+begin_src basic
 10 GR
 11 COLOR = INT(RND(1)*16)
 12 PRINT "BOXES"
@@ -139,11 +139,11 @@
 80 VLIN y1, y2 AT x1
 90 VLIN y1, y2 AT x2
 100 GOTO 11
-```
+#+end_src
 
 *** Hi-Res Graphic
 
-```basic
+#+begin_src basic
 100 HGR
 101 PRINT "SINE WAVE HARMONIC PLOT"
 110 HCOLOR = 1
@@ -158,34 +158,34 @@
 200 f = f*2: i = i+1
 210 HCOLOR = i
 220 NEXT i
-```
+#+end_src
 
 ** SmartLOGO
 
 *** CS
 *** TO SQUARE
 
-```logo
+#+begin_src logo
 TO SQUARE
     REPEAT 4 [ FD 100 RT 90 ]
 END
-```
+#+end_src
 
 *** TO STAR
 
-```logo
+#+begin_src logo
 TO STAR
     REPEAT 30 [ SQUARE RT 12 ]
 END
-```
+#+end_src
 
 *** TO CIRCLE
 
-```logo
+#+begin_src logo
 TO CIRCLE
    REPEAT 360 [ RT 1 FD 1 ]
 END
-```
+#+end_src
 
 ** Productivity Apps
 
