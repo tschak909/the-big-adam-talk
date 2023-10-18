@@ -113,7 +113,22 @@
 *** Filesystems
 
 **** EOS
+
+- Elementary
+- Sequential
+- FLAT
+- 12 Char Filenames
+  - 11 Char name
+  - 1 Char type
+- Pre-allocated
+- EOS 5 can do 4.3T volumes
+- EOS 6 can do 64MB volumes
+
 **** CP/M
+
+- CP/M Version 2.2
+- Supports 160K Disk
+- Supports 256K DDP
 
 *** Modern Solutions (ADE and FujiNet)
 
