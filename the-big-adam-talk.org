@@ -31,13 +31,16 @@
 ** What is the Coleco Adam?
 
 *** [[https://lowendbox.com/wp-content/uploads/2023/07/coleco-adam-closeup.png][The Box]]
-**** [[https://content.invisioncic.com/r322239/gallery/album_932/gallery_34480_932_38891.jpg][Expansion Module #3]]
+
+- [[https://content.invisioncic.com/r322239/gallery/album_932/gallery_34480_932_38891.jpg][Expansion Module #3]]
 
 *** [[https://content.invisioncic.com/r322239/monthly_2019_09/20190923_180755.jpg.377d2433e19b91009624e409c5dfe114.jpg][Inside the Box]]
 
 *** The Memory Console
-**** [[https://content.invisioncic.com/r322239/monthly_07_2011/post-25956-0-70461600-1309666509.jpg][Stand-Alone]]
-**** [[http://dunfield.classiccmp.org/adam/h/e3.jpg][Expansion Module #3 for ColecoVision]]
+
+- [[https://content.invisioncic.com/r322239/monthly_07_2011/post-25956-0-70461600-1309666509.jpg][Stand-Alone]]
+- [[http://dunfield.classiccmp.org/adam/h/e3.jpg][Expansion Module #3 for ColecoVision]]
+
 **** Specs
 
 - 64K of DRAM
@@ -58,13 +61,46 @@
 - (1) EOS ROM (the Adam BIOS)
 - (1) OS7 ROM (the ColecoVision BIOS)
 - (1) SmartWriter ROM (Word Processor)
+  
+**** [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Slots/SLOT%203_1.gif][Expansion]]
+
+- [[https://diroccovision.com/Coleco/adam/Documents/Manual/Coleco_ADAM_Schematic_-_Gamma_(1).png][Schematic]]
+
+***** [[https://diroccovision.com/Coleco/adam/External_Expansion.htm][Right slot]]
+
+- Exactly like ColecoVision Expansion slot
+- [[https://i.ytimg.com/vi/aYywqZp-uBY/maxresdefault.jpg][Expansion #1 for Atari VCS (2600)]]
+- [[https://thumbs.worthpoint.com/zoom/images3/1/0716/17/address-book-filer-auto-dialer-coleco_1_e6c852f8f9a143e8d6d3831ec60c6786.jpg][AutoDialer]]
+- [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Other/Orphanware%2080%20Column%20Video.gif][OrphanWare 80 Column]]
+- EVE SP-1
+- etc...
+
+***** Internal Slot 1
+
+- Limited I/O
+- Intended for AdamLink [[https://i.pinimg.com/736x/6c/48/c0/6c48c03e2950380ece9c468509343807--modem-instruments.jpg][MODEM]]
+- [[https://diroccovision.com/Coleco/adam/Pics/Cards/MI/MI%20Dual%20Serial.gif][MI Dual Serial Interface]]
+- [[https://diroccovision.com/Coleco/adam/Pics/Cards/MI/MI%20Powermate%20Host.jpg][MI and MicroFox IDE Hard Disk Adapters]]
+  
+***** Internal Slot 2
+
+- More I/O, some memory mapping
+- Originally intended for Language Cards
+- Now used for I/O and memory addressors
+
+***** Internal Slot 3
+
+- Memory addressing, limited I/O
+- Originally intended for [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Exp%20Collage.jpg][64K RAM Expansion]]
+- Now used for larger memory cards, up to [[https://diroccovision.com/Coleco/adam/Pics/Cards/MicroFox/MF%201mb.gif][1MB]]
 
 *** [[https://content.invisioncic.com/r322239/monthly_05_2016/post-44577-0-17162700-1462626598.jpg][Keyboard]]
-**** Keycaps in Handel Gothic
-**** Dome switches
-**** 78 keys
-**** 6 Function Keys (I-VI)
-**** Command Keys
+
+- Keycaps in Handel Gothic
+- Dome switches
+- 78 keys
+- 6 Function Keys (I-VI)
+- Command Keys
 
 - ESCAPE/WP
 - WILD CARD
@@ -75,10 +111,12 @@
 - INSERT
 - PRINT
 - DELETE
+  
+- Arrow Keys and Home
 
-**** Arrow Keys and Home
 *** [[https://i.ebayimg.com/images/g/QZMAAOSwzS5hnZuD/s-l1200.webp][SmartWriter Printer]]
-**** [[https://digibarn.com/collections/systems/coleco-adam/CIMG3309.JPG][The printer supplies THE POWER!]]
+
+- [[https://digibarn.com/collections/systems/coleco-adam/CIMG3309.JPG][The printer supplies THE POWER!]]
 
 ** Turning it on
 
@@ -108,13 +146,40 @@
 **** Using mame castool
 
 *** Disks
+
+- Capacities from 160K to 1.44MB
+- Definitely faster than DDP
+
 *** [[http://ann.hollowdreams.com/adamsupplies.html][Hard Disk]]
+
+- Larger
+- Much Faster than floppies or DDPs
+- Connect via Internal card or AdamNet
+- Handle CP/M or EOS volumes
+
+*** Modern Solutions (ADE and FujiNet)
+
+- Connect via AdamNet
+- Uses SD cards
+- Mount images in one of four device IDs
+- Handles DDP, DSK, and ROMs
+- FujiNet adds network storage and applications
+
 *** Comparison of capacities
+
+- Adam thinks of media in 1024 byte blocks
+- DDP drives have 256 blocks
+- Original Coleco drives have 160 blocks
+- [[https://content.invisioncic.com/r322239/monthly_08_2017/post-10892-0-07950100-1503737482.jpg][Micro Innovations 5¼ Floppy Drive had 320 blocks]]
+- [[https://content.invisioncic.com/r322239/monthly_08_2017/post-10892-0-27176300-1503737664.jpg][Micro Innovation 3½ Floppy Drive had 720 blocks]]
+- Micro Innovation also did a 1.44MB 3½ drive. 1440 blocks
+
 *** Filesystems
 
 **** EOS
 
 - Elementary
+- In ROM
 - Sequential
 - FLAT
 - 12 Char Filenames
@@ -129,8 +194,32 @@
 - CP/M Version 2.2
 - Supports 160K Disk
 - Supports 256K DDP
+- Supports 64K RAM Disk
+- Supports Printer
+- Supports AdamNet Serial Interface
+- Emulates VT-52 (H19) terminal
+- Scrolling 80 column window
+- Smart Key display
+- Thousands of CP/M programs
+- Includes transfer programs
+- Includes backup utility
+- Includes Formatter for disk/tape
+- Includes Sysgen
+- Includes Config
+- Can be patched for other capacities
 
-*** Modern Solutions (ADE and FujiNet)
+**** T-DOS
+
+- CP/M Replacement
+- By Tony Morehen and Guy Cousineau
+- 40 column text mode
+- 80 column virtual display
+- Supports more disk capacities
+- Supports Microfox IDE Hard Disk
+- Supports directories
+- Supports time-stamps
+- Supports EVE 80 column expansion
+- Supports MIB serial/parallel card
 
 ** SmartBASIC
 
