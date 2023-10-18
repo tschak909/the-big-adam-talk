@@ -13,23 +13,37 @@
 **** Including a printer
 **** Why "Tape?" [[https://archive.org/details/creativecomputing-1983-01/page/n243/mode/2up][Disk drives were EXPENSIVE!]]
 
+** The Competition
+*** [[https://upload.wikimedia.org/wikipedia/commons/7/74/Atari-2600-Four-Switch-Black-Console-01.jpg][Atari VCS (2600) ($129)]]
+*** [[https://gametrog.com/wp-content/uploads/2019/09/intelivision-2-top-angle.jpg][Intellivision II ($150)]]
+*** [[https://m.media-amazon.com/images/I/81jDYYNLdGL.jpg][ColecoVision ($175)]]
+*** [[https://i.ebayimg.com/images/g/wz0AAOSw-zdjRQ9Z/s-l1200.jpg][Sega SG-1000/SC-3000 (¥15,000/$100)]] / [[https://www.smspower.org/uploads/Scans/Sega-Advertisement-SC3000Series-JP-3.jpg][(¥29,800/$200)]]
+*** [[https://i.ebayimg.com/images/g/lB4AAOSwLI9ktcgm/s-l1600.jpg][Spectravideo SV-318 ($299)]]
+*** [[https://preview.redd.it/3laoud5945q81.jpg?width=4032&format=pjpg&auto=webp&s=7921a89e08379f405300114ea9d1a71a81117343][MSX (59,800¥/$399)]]
+*** [[https://www.vintagecomputing.com/wp-content/images/retroscan/ti_cosby_large.jpg][TI-99/4A ($525)]]
+*** [[https://i.redd.it/n6yhwdtwooy61.jpg][Commodore 64 ($595)]]
+*** [[https://i.ebayimg.com/images/g/YFIAAOSwlh9iNB2g/s-l1200.webp][Atari 1200XL ($899)]]
+*** [[https://m.media-amazon.com/images/I/719rf4NNVyL._AC_UF894,1000_QL80_.jpg][IBM PCjr ($669, or $1269 with disk drive)]]
+*** [[https://archive.org/details/apple-iie-print-ad-1983/mode/thumb][Apple IIe ($1395, no disk drive)]]
+
+
 ** What is the Coleco Adam?
 
 *** [[https://lowendbox.com/wp-content/uploads/2023/07/coleco-adam-closeup.png][The Box]]
-
 **** [[https://content.invisioncic.com/r322239/gallery/album_932/gallery_34480_932_38891.jpg][Expansion Module #3]]
+
 *** [[https://content.invisioncic.com/r322239/monthly_2019_09/20190923_180755.jpg.377d2433e19b91009624e409c5dfe114.jpg][Inside the Box]]
+
 *** The Memory Console
 **** [[https://content.invisioncic.com/r322239/monthly_07_2011/post-25956-0-70461600-1309666509.jpg][Stand-Alone]]
 **** [[http://dunfield.classiccmp.org/adam/h/e3.jpg][Expansion Module #3 for ColecoVision]]
-*** [[https://content.invisioncic.com/r322239/monthly_05_2016/post-44577-0-17162700-1462626598.jpg][Keyboard]]
 
+*** [[https://content.invisioncic.com/r322239/monthly_05_2016/post-44577-0-17162700-1462626598.jpg][Keyboard]]
 **** Keycaps in Handel Gothic
 **** Dome switches
 **** 78 keys
 **** 6 Function Keys (I-VI)
 **** Command Keys
-
 ***** ESCAPE/WP
 ***** WILD CARD
 ***** UNDO
