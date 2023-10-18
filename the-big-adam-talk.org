@@ -7,9 +7,11 @@
 
 ** Why?
 
-*** [[https://i.ebayimg.com/images/g/PbkAAOSwx-9in4ST/s-l1200.webp][Market to Little Billy]]
-*** Do Homework, then games.
-*** [[https://books.google.com/books?id=NbgDAAAAMBAJ&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false][$600 Target price (p. 75)]]
+- [[https://i.ebayimg.com/images/g/PbkAAOSwx-9in4ST/s-l1200.webp][Market to Little Billy]]
+- Do Homework, then games.
+- [[https://books.google.com/books?id=NbgDAAAAMBAJ&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false][$600 Target price (p. 75)]], OR
+- $400 if you had a ColecoVision (EM#3)
+
 **** Including a printer
 **** Why "Tape?" [[https://archive.org/details/creativecomputing-1983-01/page/n243/mode/2up][Disk drives were EXPENSIVE!]]
 
@@ -26,7 +28,6 @@
 *** [[https://m.media-amazon.com/images/I/719rf4NNVyL._AC_UF894,1000_QL80_.jpg][IBM PCjr ($669, or $1269 with disk drive)]]
 *** [[https://archive.org/details/apple-iie-print-ad-1983/mode/thumb][Apple IIe ($1395, no disk drive)]]
 
-
 ** What is the Coleco Adam?
 
 *** [[https://lowendbox.com/wp-content/uploads/2023/07/coleco-adam-closeup.png][The Box]]
@@ -37,6 +38,26 @@
 *** The Memory Console
 **** [[https://content.invisioncic.com/r322239/monthly_07_2011/post-25956-0-70461600-1309666509.jpg][Stand-Alone]]
 **** [[http://dunfield.classiccmp.org/adam/h/e3.jpg][Expansion Module #3 for ColecoVision]]
+**** Specs
+
+- 64K of DRAM
+- 16K of VDP DRAM (64+16 = 80K!)
+- Z80 CPU @ 3.58MHz
+- SN76489 Digital Complex Sound Generator (DCSG)
+- Master 6801 CPU for AdamNet
+- Slave 6801 CPU for DDP Drive
+- (1) DDP Drive
+- (2) Joystick Ports
+- (2) AdamNet Ports
+- (3) Internal Card Slots
+- (1) External Expansion Bus
+- (1) Printer/Power connector (also AdamNet)
+- (1) Modulated RF output
+- (1) AUX VIDEO (Composite) output
+- (1) Complete ColecoVision (!)
+- (1) EOS ROM (the Adam BIOS)
+- (1) OS7 ROM (the ColecoVision BIOS)
+- (1) SmartWriter ROM (Word Processor)
 
 *** [[https://content.invisioncic.com/r322239/monthly_05_2016/post-44577-0-17162700-1462626598.jpg][Keyboard]]
 **** Keycaps in Handel Gothic
@@ -44,15 +65,16 @@
 **** 78 keys
 **** 6 Function Keys (I-VI)
 **** Command Keys
-***** ESCAPE/WP
-***** WILD CARD
-***** UNDO
-***** MOVE/COPY
-***** STORE/GET
-***** CLEAR
-***** INSERT
-***** PRINT
-***** DELETE
+
+- ESCAPE/WP
+- WILD CARD
+- UNDO
+- MOVE/COPY
+- STORE/GET
+- CLEAR
+- INSERT
+- PRINT
+- DELETE
 
 **** Arrow Keys and Home
 *** [[https://i.ebayimg.com/images/g/QZMAAOSwzS5hnZuD/s-l1200.webp][SmartWriter Printer]]
@@ -77,8 +99,10 @@
 
 *** DDPs
 
-**** block oriented
-**** 20ips search / 80ips read and write
+- block oriented
+- 256 Kilobytes (256 blocks)
+- 20ips search / 80ips read and write
+
 **** DDPs versus Standard Tapes
 **** [[http://adamarchive.org/archive/Technical/ADAM%20Mods/Audio%20Cassette%20Tape%20to%20a%20ADAM%20DDP%20Pack%21%21%20v2.2.pdf][Adapting Standard Tapes]]
 **** Using mame castool
@@ -95,29 +119,73 @@
 
 ** SmartBASIC
 
+- AppleSoft Compatible
+- Emulates lo-res and hi-res graphics
+- Loaded from Data Pack or disk
+- Written by Randy Hyde/Lazer MicroSystems
+
 *** Lo-Res Graphics
+
+```basic
+10 GR
+11 COLOR = INT(RND(1)*16)
+12 PRINT "BOXES"
+20 x1 = INT(RND(1)*39)
+30 x2 = INT(RND(1)*39)
+40 y1 = INT(RND(1)*39)
+50 y2 = INT(RND(1)*39)
+60 HLIN x1, x2 AT y1
+70 HLIN x1, x2 AT y2
+80 VLIN y1, y2 AT x1
+90 VLIN y1, y2 AT x2
+100 GOTO 11
+```
+
 *** Hi-Res Graphic
+
+```basic
+100 HGR
+101 PRINT "SINE WAVE HARMONIC PLOT"
+110 HCOLOR = 1
+120 a = 50
+130 f = .0125
+140 p = 0
+150 FOR i = 0 TO 4
+160 FOR x = 0 TO 255
+170 y = a*SIN(2*3.14159*f*x+p)+100
+180 HPLOT x, y
+190 NEXT x
+200 f = f*2: i = i+1
+210 HCOLOR = i
+220 NEXT i
+```
 
 ** SmartLOGO
 
 *** CS
 *** TO SQUARE
 
+```logo
 TO SQUARE
-REPEAT 4 [ FD 100 RT 90 ]
+    REPEAT 4 [ FD 100 RT 90 ]
 END
+```
 
 *** TO STAR
 
+```logo
 TO STAR
-REPEAT 30 [ SQUARE RT 12 ]
+    REPEAT 30 [ SQUARE RT 12 ]
 END
+```
 
 *** TO CIRCLE
 
+```logo
 TO CIRCLE
-REPEAT 360 [ RT 1 FD 1 ]
+   REPEAT 360 [ RT 1 FD 1 ]
 END
+```
 
 ** Productivity Apps
 
