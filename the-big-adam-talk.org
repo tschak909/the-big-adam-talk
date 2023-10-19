@@ -135,9 +135,14 @@
 
 ** Storage
 
-*** DDPs
+*** [[https://diroccovision.com/Coleco/adam/Library/Coleco/DDP%202564%20(Solid).jpg][DDPs]]
 
 - block oriented
+- PRE-FORMATTED
+
+- Not User Formattable without help!
+  e.g. [[https://diroccovision.com/Coleco/adam/Pics/Cards/Lundy/DD%20MEGACOPY%20REDUX.jpg][(Trisyd MegaCopy)]]
+
 - 256 Kilobytes (256 blocks)
 - 20ips search / 80ips read and write
 - DON'T LEAVE A TAPE IN DRIVE!
@@ -169,6 +174,7 @@
 - DDP: Holes in different places
 
 **** [[http://adamarchive.org/archive/Technical/ADAM%20Mods/Audio%20Cassette%20Tape%20to%20a%20ADAM%20DDP%20Pack%21%21%20v2.2.pdf][Adapting Standard Tapes]]
+
 **** Using mame castool
 
 *** Disks
@@ -183,7 +189,7 @@
 - Connect via Internal card or AdamNet
 - Handle CP/M or EOS volumes
 
-*** Modern Solutions (ADE and FujiNet)
+*** [[https://fujinet.online/wp-content/uploads/2022/03/ADAM-FujiNet-v1.0-CONFIG.jpg][Modern Solutions (ADE and FujiNet)]]
 
 - Connect via AdamNet
 - Uses SD cards
@@ -195,7 +201,7 @@
 
 - Adam thinks of media in 1024 byte blocks
 - DDP drives have 256 blocks
-- Original Coleco drives have 160 blocks
+- [[https://diroccovision.com/Coleco/adam/Pics/Expansion/525%20Disk%20Drive.jpg][Original Coleco drives have 160 blocks]]
 - [[https://content.invisioncic.com/r322239/monthly_08_2017/post-10892-0-07950100-1503737482.jpg][Micro Innovations 5¼ Floppy Drive had 320 blocks]]
 - [[https://content.invisioncic.com/r322239/monthly_08_2017/post-10892-0-27176300-1503737664.jpg][Micro Innovation 3½ Floppy Drive had 720 blocks]]
 - Micro Innovation also did a 1.44MB 3½ drive. 1440 blocks
@@ -215,7 +221,7 @@
 - EOS 5 can do 4.3T volumes
 - EOS 6 can do 64MB volumes
 
-**** CP/M
+**** [[https://diroccovision.com/Coleco/adam/Library/Coleco/CPM/CPM%20%207832.jpg][CP/M]]
 
 - CP/M Version 2.2
 - Supports 160K Disk
@@ -290,7 +296,7 @@
 220 NEXT i
 #+end_src
 
-** SmartLOGO
+** [[https://diroccovision.com/Coleco/adam/Library/Coleco/LOGO/LOGO%207600%20(R).jpg][SmartLOGO]]
 
 *** CS
 
@@ -320,15 +326,56 @@ END
 
 ** Productivity Apps
 
-*** AdamCalc
-*** Recipe Filer
-*** SmartFiler
-*** Smart Letters and Forms
+*** [[https://diroccovision.com/Coleco/adam/Library/Coleco/ADAMCalc/ADAMCALC%207831%20(R).jpg][AdamCalc]]
+
+- Comparable with VisiCalc
+- 255 Rows, 255 columns
+- Easy to use
+
+*** [[https://diroccovision.com/Coleco/adam/Library/Coleco/SmartFILER/SmartFiler%207813%20(R).jpg][SmartFiler]]
+
+- Simple ISAM Database application
+- Indexable Character and Number types
+  Maximum 255 characters for all
+- Non-Indexable Text type
+  Two type-written pages of information
+  Must be last field on form
+- First field is the primary key
+
+*** [[https://diroccovision.com/Coleco/adam/Library/Coleco/RecipeFiler/RecipeFiler%207814%20(R).jpg][Recipe Filer]]
+
+- Adaptation of SmartFiler for storing recipes
+- Shopping list built up from selected recipes
+- Comes with 30+ example recipes
+
+*** [[https://diroccovision.com/Coleco/adam/Library/Coleco/Smart%20Letters/SmartLnF%207805%20(R).jpg][Smart Letters and Forms]]
+
+- Extends SmartWriter to add form letters
+- Select a template; fill out the form.
+- Print the result
+- Samples for each template
+
+*** [[https://diroccovision.com/Coleco/adam/Library/Coleco/Address%20Book/Address%20Book%207815%20(R).jpg][Address Book Filer and AutoDialer]]
+
+- Address book based on SmartFiler
+- Mailing List functionality
+- Can use Auto Dialer to dial numbers
 
 ** Educational Software
 
-*** Electronic Flashcard Maker
+*** [[https://diroccovision.com/Coleco/adam/Library/Coleco/Flashcard%20Maker/Flashcard%20Maker%207662%20(R).jpg][Electronic Flashcard Maker]]
+
+- Quickly make flash cards for school
+- 30 decks, with 200 cards each deck on one data pack
+- Flash Facts expansion packs
+  Vocabulator (Vocabulary Builder)
+  American History
+  Trivia
+
 *** ExperType
+
+- Touch Typing Tutor
+- Adapts to user
 
 ** Comparing Games against Super Games
 
