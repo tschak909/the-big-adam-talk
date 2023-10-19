@@ -658,3 +658,18 @@ END
 - Native Development with MacADAM
 - Native Development in CP/M
 
+* References
+
+Information:
+- http://www.diroccovision.com/
+
+Software Archive:
+- http://www.adamarchive.org/
+
+Peripheral Vendors:
+- http://www.lundyelectronics.com/
+- http://ann.hollowdreams.com/adamsupplies.html
+- http://coleco.freeservers.com/
+- https://thebrewingacademy.com/
+- http://fujinet.online/
+
