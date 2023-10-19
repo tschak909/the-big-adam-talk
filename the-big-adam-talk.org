@@ -140,8 +140,34 @@
 - block oriented
 - 256 Kilobytes (256 blocks)
 - 20ips search / 80ips read and write
+- DON'T LEAVE A TAPE IN DRIVE!
+
+**** DDP Format: Right Directory
+
+- GW format
+- Block 0 at beginning of tape
+- Used by Super Games
+
+- Buck Rogers: Planet of Zoom
+- Donkey Kong
+- Donkey Kong Jr.
+- Dragons Lair
+- etc
+
+**** DDP Format: Center Directory
+
+- HE Format (Howard Eglowstein)
+- Block 0 in center of tape
+- Faster directory block access
+- Used by SmartBASIC and EOS tapes
 
 **** DDPs versus Standard Tapes
+
+- DDP: Thicker Lexan(tm) cassette shell
+- DDP: Lubricated rollers in shell
+- DDP: Tighter mechanical tolerances; smoother.
+- DDP: Holes in different places
+
 **** [[http://adamarchive.org/archive/Technical/ADAM%20Mods/Audio%20Cassette%20Tape%20to%20a%20ADAM%20DDP%20Pack%21%21%20v2.2.pdf][Adapting Standard Tapes]]
 **** Using mame castool
 
@@ -318,3 +344,7 @@ END
 *** Booting
 *** Virtual Screen
 *** Even from DDP
+
+** Modern Programming
+
+*** Z88DK
