@@ -11,19 +11,124 @@
 - Do Homework, then games.
 - [[https://books.google.com/books?id=NbgDAAAAMBAJ&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false][$600 Target price (p. 75)]], OR
 - $400 if you had a ColecoVision (EM#3)
-
-**** Including a printer
-**** Why "Tape?" [[https://archive.org/details/creativecomputing-1983-01/page/n243/mode/2up][Disk drives were EXPENSIVE!]]
+- [[https://diroccovision.com/Coleco/adam/Pics/Hardware/Coleco%20ADAM%20Master%20Box%202412%20Internal%201.jpg][Including a printer IN THE BOX!]]
+- Why "Tape?" [[https://archive.org/details/creativecomputing-1983-01/page/n243/mode/2up][Disk drives were EXPENSIVE!]]
 
 ** The Competition
+
+- A sampling of what was available
+  As of Fall 1983
+
+  Prices are MSRP.
+  
 *** [[https://upload.wikimedia.org/wikipedia/commons/7/74/Atari-2600-Four-Switch-Black-Console-01.jpg][Atari VCS (2600) ($129)]]
+
+- Ubiquitous
+- 6507 8-bit CPU and TIA chip
+- 128 BYTES (!) of 8-bit RAM, 4K of addressable ROM
+- 1 button 8 direction stick; paddles
+- Tons of Games (almost 200 at this point!)
+- Pack-in at this point was [[https://youtu.be/nCPpgt0s70U?si=htfLz6c26hd3qUQ_&t=234][Pac-Man]]
+- [[https://oldcomputers.net/pics/spectravideo-compumate-atari.jpg][SpectraVideo CompuMate ($79.99)]]
+- Atari had contracted PVI to buld [[https://i.insider.com/54fa26406bb3f74b5c0b2644?width=1000&format=jpeg&auto=webp]["The Graduate"]]
+  Never materialized
+
 *** [[https://gametrog.com/wp-content/uploads/2019/09/intelivision-2-top-angle.jpg][Intellivision II ($150)]]
-*** [[https://m.media-amazon.com/images/I/81jDYYNLdGL.jpg][ColecoVision ($175)]]
+
+- 16-bit CP1600 CPU
+- GI AY-3-8900 STIC for video
+- GI AY-3-8914 for sound
+- 704 bytes (352 words) of 16-bit RAM
+- 3 button 12 button keypad disc, 8 positions.
+- [[https://youtu.be/XMmMgEHdw9U?si=dHkP41OgDKn0HM5M&t=63][BurgerTime]] pack-in
+- [[https://intellivisionrevolution.com/files/packed/1wefik0plzsc607ur60u367vy9gabxiefn160gfraih0nu88itr5beddgxdar817q65xo0muqlete5pgda0olm79xgrxa9uv3vzdypwq5wol85zyca9392a7kt4ezedqdtyxbfczyk3gdo2wo85exvqtt2u1yzr1.jpg][Keyboard Component]] never mass produced
+  Test marketed in 1981 at $600
+  Was a complete system that genlocked onto STIC
+
+- [[https://bbent.com/Computers/Intellivision/Images/ConsoleOutlined.png][ECS]] released in 1983
+  Significantly simpler
+  Only used STIC
+
+- Had [[system changer][system changer]] for Atari 2600 carts
+  (using VTI TIA clone)
+  
+*** [[https://m.media-amazon.com/images/I/81jDYYNLdGL.jpg][ColecoVision ($199)]]
+
+- Used common pairing of
+  TMS9928 VDP / SN76489 SOUND / Z80 CPU
+
+- Common function ROM (OS7)
+  
+- 1K of CPU DRAM / 16K of VDP DRAM
+  
+- Expansion bus originally for [[https://diroccovision.com/Coleco/ColecoVision/CV_SGM_Wafer.htm][Super Game Module]]
+  Which Became [[https://diroccovision.com/Coleco/adam/Pics/Hardware/ADAM/EXP3/EXP3%20Full.jpg][Expansion Module #3 (ADAM)]]
+
+- 2 button 12 button keypad stick
+  
+- Came with [[https://youtu.be/nI9WwdVb-_A?si=PL-qM4pSBkdslrw_&t=19][Donkey Kong]]
+    
 *** [[https://i.ebayimg.com/images/g/wz0AAOSw-zdjRQ9Z/s-l1200.jpg][Sega SG-1000/SC-3000 (¥15,000/$100)]] / [[https://www.smspower.org/uploads/Scans/Sega-Advertisement-SC3000Series-JP-3.jpg][(¥29,800/$200)]]
+
+- Same trio of chips as ColecoVision
+- Same RAM as ColecoVision
+- 2-button stick
+- No common function ROM
+- SC-3000 expands CPU RAM to 16K
+- [[SF-7000 system expander.][SF-7000 system expander.]] (¥79,800/$532.67)
+  
+*** [[https://i.ebayimg.com/images/g/MGQAAOSwCotj~Dd0/s-l1600.jpg][Atari 5200 SuperSystem ($269)]]
+
+- Based on Atari 400
+- 6502, ANTIC, GTIA, 16K RAM, 2K ROM
+- Non-centering Analog sticks
+- Pack-in: [[https://youtu.be/_Eg4CfDFJmQ?si=WO_ZJv19jap8TWr0&t=12][Super Breakout]]
+- Initially 4 port, then 2 port
+- [[https://cdn.consolevariations.com/6916/atari-5200-vcs-cartridge-adapter-front-1576511603-92.webp][Atari VCS Cartridge Adapter]]
+- Unused I/O expansion
+
 *** [[https://i.ebayimg.com/images/g/lB4AAOSwLI9ktcgm/s-l1600.jpg][Spectravideo SV-318 ($299)]]
+
+- Same trio of chips as ColecoVision
+- 16K of RAM
+- 16K of VDP RAM
+- chicklet keyboard
+- Built in "joystick"
+- ColecoVision Adapter (SVI-603) ($70)
+
+- [[Floppy and cassette storage][Floppy and cassette storage]]
+  Also required [[https://www.msx.org/wiki/images/f/f4/Sv601b.jpg][SV-601]] Super Expander
+  and [[https://www.msx.org/wiki/images/c/cf/Sv801a.jpg][SV-801 Floppy Controller]] cartridge
+  
 *** [[https://preview.redd.it/3laoud5945q81.jpg?width=4032&format=pjpg&auto=webp&s=7921a89e08379f405300114ea9d1a71a81117343][MSX (59,800¥/$399)]]
+
+- A unified standard from Microsoft and ASCII Corporation
+- [[https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Sony_HitBit_HB-10P_%28White_Background%29.jpg/1200px-Sony_HitBit_HB-10P_%28White_Background%29.jpg][Many]], [[https://i.ebayimg.com/images/g/iZoAAOSwT0tjdaOs/s-l1200.webp][many]] vendors.
+
+- Same CPU and VDP as ColecoVision,
+  but AY-3-8910 sound
+
+- 16K to 64K of RAM in MSX1 standard
+- One or more cartridge slots for expansion
+- Wide variety of input devices
+- Typically built in printer port
+
+- Popular EVERYWHERE _EXCEPT_ North America
+
 *** [[https://www.vintagecomputing.com/wp-content/images/retroscan/ti_cosby_large.jpg][TI-99/4A ($525)]]
+
+- Released in 1981
+- 16-bit TMS9900 CPU
+- 16K of 8-bit ram attached to TMS9918
+- Same video/sound chips as ColecoVision
+- Needed [[http://www.historyofpersonalcomputing.com/wp-content/uploads/2015/03/PEB.png][PEB]] for disk, RS232/PIO, and 32K RAM ($1475.00)
+- Competition was forcing major price drops!
+- [[https://youtu.be/uCSQd0eJKQQ?si=JT5C7HfKVoZxmkPK&t=67][TI software library was solid.]]
+
 *** [[https://i.redd.it/n6yhwdtwooy61.jpg][Commodore 64 ($595)]]
+
+
+
 *** [[https://i.ebayimg.com/images/g/YFIAAOSwlh9iNB2g/s-l1200.webp][Atari 1200XL ($899)]]
 *** [[https://m.media-amazon.com/images/I/719rf4NNVyL._AC_UF894,1000_QL80_.jpg][IBM PCjr ($669, or $1269 with disk drive)]]
 *** [[https://archive.org/details/apple-iie-print-ad-1983/mode/thumb][Apple IIe ($1395, no disk drive)]]
@@ -96,7 +201,7 @@
 
 *** [[https://content.invisioncic.com/r322239/monthly_05_2016/post-44577-0-17162700-1462626598.jpg][Keyboard]]
 
-- Keycaps in Handel Gothic
+- Keycaps in [[https://en.wikipedia.org/wiki/Handel_Gothic][Handel Gothic]]
 - Dome switches
 - 78 keys
 - 6 Function Keys (I-VI)
@@ -117,17 +222,55 @@
 *** [[https://i.ebayimg.com/images/g/QZMAAOSwzS5hnZuD/s-l1200.webp][SmartWriter Printer]]
 
 - [[https://digibarn.com/collections/systems/coleco-adam/CIMG3309.JPG][The printer supplies THE POWER!]]
+- Daisy Wheel printer
+- [[https://diroccovision.com/Coleco/adam/Accessories/PICA.gif][Uses variant of Diablo wheels]]
+- Most common wheel is Courier 72
+- Others include Pica 10, Prestige Elite 12
+- [[https://diroccovision.com/Coleco/adam/Accessories/ColecoVision%20ADAM%20Ribbon.jpg][Has its own ribbon form factor]]
+- 80 columns
+- 16 character print buffer
+- 10 characters per second print speed
+
+- Bi-Directional
+  Underlining
+  Faster printing
+
+- Half-Line-Feeds
+  For superscripts and subscripts
+  
+- Hollow platen (LOUD!)
 
 ** Turning it on
 
 *** SmartWriter (more later)
+
+- If nothing to boot, goes into SmartWriter
+
 *** Loading Buck Rogers
+
+- Insert a data pack into either drive
+- Pull the COMPUTER reset switch
+- It will boot.
+
 *** Loading Zaxxon
+
+- Plug in a ColecoVision cartridge
+- Pull the cartridge reset
 
 ** SmartWriter
 
 *** Typewriter
+
+- What you type, goes to printer
+- A way to ease neophytes into the computer
+
 *** Word Processor
+
+- Press ESCAPE/WP for Word Processor.
+- Any text typed in Typewriter migrates to Word Processor
+- Screen options
+- 
+
 *** Store/Get
 *** Editing
 *** Backup Files
@@ -389,9 +532,40 @@ END
 ** CP/M and TDOS
 
 *** Booting
+
+- Booted like any other Adam program
+- Takes over system
+- Approximately 56K TPA
+
 *** Virtual Screen
+
+- Uses VDP Graphics II mode
+- 32 columns visible
+- 80 column window, scrolls with cursor
+
 *** Even from DDP
 
-** Modern Programming
+- Formatting a DDP for CP/M
+- Sysgen a DDP
+- 
 
-*** Z88DK
+** FujiNet
+
+*** Virtual Disk
+
+- Load software from Internet or local SD card storage
+- Write works too
+- Supports DDP
+- Supports DSK
+- Supports ROM (up to 32K non-bank-switched)
+- Can copy disk images to/from local/remote sources
+- Can create new DSK and DDP images
+
+*** 
+
+** Programming
+
+- Cross Development with Z88DK (http://www.z88dk.org/)
+- Native Development with MacADAM
+- Native Development in CP/M
+
