@@ -498,6 +498,26 @@
 220 NEXT i
 #+end_src
 
+*** Hi-Res color clash
+
+- HGR uses VDP MODE 2 (BITMAP)
+  
+- Due to color attributes being 8x1 pixels,
+  some color clash does occur.
+  
+#+begin_src basic
+100 HGR
+101 PRINT "MOIRE PATTERN"
+102 C=1:S=3
+110 HCOLOR=C
+120 FOR x=0 to 255 STEP S:HPLOT 128,80 TO X,1:NEXT X
+130 FOR y=0 to 159 STEP S:HPLOT 128,80 TO 255,Y:NEXT Y
+140 FOR x=255 to 0 STEP -S:HPLOT 128,80 TO x,159:NEXT X
+150 FOR y=159 to 0 STEP -S:HPLOT 128,80 TO 1,y:NEXT Y
+160 C=C+1
+170 GOTO 110
+#+end_src
+
 ** [[https://diroccovision.com/Coleco/adam/Library/Coleco/LOGO/LOGO%207600%20(R).jpg][SmartLOGO]]
 
 *** CS
