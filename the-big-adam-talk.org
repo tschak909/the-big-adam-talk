@@ -30,16 +30,24 @@
 
 *** [[https://lowendbox.com/wp-content/uploads/2023/07/coleco-adam-closeup.png][The Box]]
 
+- [[file:all-three-boxes.jpg][Freakin' Huge!]]
+- Memory console
+- Printer and ephemera
+- Manuals
+- Switch Box
+- SmartBASIC
+- Buck Rogers: Planet of Zoom
+  
 - [[https://content.invisioncic.com/r322239/gallery/album_932/gallery_34480_932_38891.jpg][Expansion Module #3]]
-
-*** [[https://content.invisioncic.com/r322239/monthly_2019_09/20190923_180755.jpg.377d2433e19b91009624e409c5dfe114.jpg][Inside the Box]]
-
+  
 *** The Memory Console
 
-- [[https://content.invisioncic.com/r322239/monthly_07_2011/post-25956-0-70461600-1309666509.jpg][Stand-Alone]]
-- [[http://dunfield.classiccmp.org/adam/h/e3.jpg][Expansion Module #3 for ColecoVision]]
+Came in two varieties:
 
-**** Specs
+- [[https://content.invisioncic.com/r322239/monthly_07_2011/post-25956-0-70461600-1309666509.jpg][Stand-Alone]] ($700)
+- [[http://dunfield.classiccmp.org/adam/h/e3.jpg][Expansion Module #3 for ColecoVision ($500)]]
+
+*** Specs
 
 - 64K of DRAM
 - 16K of VDP DRAM (64+16 = 80K!)
@@ -60,11 +68,35 @@
 - (1) OS7 ROM (the ColecoVision BIOS)
 - (1) SmartWriter ROM (Word Processor)
   
-**** [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Slots/SLOT%203_1.gif][Expansion]]
+*** [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Slots/SLOT%203_1.gif][Expansion]]
 
-- [[https://diroccovision.com/Coleco/adam/Documents/Manual/Coleco_ADAM_Schematic_-_Gamma_(1).png][Schematic]]
+**** AdamNet
 
-***** [[https://diroccovision.com/Coleco/adam/External_Expansion.htm][Right slot]]
+- Two AdamNet ports
+  One in front
+  One on the left side
+  (Actually, the printer connection too)
+
+- [[https://i.ebayimg.com/images/g/674AAOSwiBZkixCq/s-l1200.jpg][Uses Standard 6P6C cross-wired cabling]]
+- [[file:disk-drive-back.jpg][Peripherals are daisy chained]]
+- [[https://i.ebayimg.com/images/g/THsAAOSw4NZbdTy-/s-l1600.jpg][Passive T-Adapters for more ports]]
+
+- 62,500 bits per second
+- One Wire for RX/TX
+
+- Inverted; open-collector
+  (the bus is high if all connected devices are high,
+  and the bus is low if any device drives a zero.)
+
+- Uses 6801's WAIT-for-break
+  to implement a multi device network.
+
+- Disk Drives
+- VDE
+- ADE
+- Printer
+
+**** [[file:right-expansion.jpg][Right slot]]
 
 - Exactly like ColecoVision Expansion slot
 - [[https://i.ytimg.com/vi/aYywqZp-uBY/maxresdefault.jpg][Expansion #1 for Atari VCS (2600)]]
@@ -73,20 +105,20 @@
 - EVE SP-1
 - etc...
 
-***** Internal Slot 1
+**** Internal Slot 1
 
 - Limited I/O
 - Intended for AdamLink [[https://i.pinimg.com/736x/6c/48/c0/6c48c03e2950380ece9c468509343807--modem-instruments.jpg][MODEM]]
 - [[https://diroccovision.com/Coleco/adam/Pics/Cards/MI/MI%20Dual%20Serial.gif][MI Dual Serial Interface]]
 - [[https://diroccovision.com/Coleco/adam/Pics/Cards/MI/MI%20Powermate%20Host.jpg][MI and MicroFox IDE Hard Disk Adapters]]
   
-***** Internal Slot 2
+**** Internal Slot 2
 
 - More I/O, some memory mapping
 - Originally intended for Language Cards
 - Now used for I/O and memory addressors
 
-***** Internal Slot 3
+**** Internal Slot 3
 
 - Memory addressing, limited I/O
 - Originally intended for [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Exp%20Collage.jpg][64K RAM Expansion]]
@@ -133,6 +165,7 @@
   
 - Hollow platen (LOUD!)
 
+
 ** Turning it on
 
 *** SmartWriter (more later)
@@ -161,8 +194,10 @@
 
 - Press ESCAPE/WP for Word Processor.
 - Any text typed in Typewriter migrates to Word Processor
+
 - Screen options
-- 
++ Color
++ Moving Window
 
 *** Store/Get
 *** Editing
@@ -506,25 +541,20 @@ END
 - Multi-player games
 - File transfer over modern protocols
 
-** Programming
-
-- Cross Development with Z88DK (http://www.z88dk.org/)
-- Native Development with MacADAM
-- Native Development in CP/M
-
 
 * References
 
 Information:
 - http://www.diroccovision.com/
-
+- http://colecoadam.net/
+  
 Software Archive:
 - http://www.adamarchive.org/
 
-Peripheral Vendors:
+Vendors:
 - http://www.lundyelectronics.com/
 - http://ann.hollowdreams.com/adamsupplies.html
 - http://coleco.freeservers.com/
 - https://thebrewingacademy.com/
 - http://fujinet.online/
-
+- [[https://8bitmilligames.com/store/coleco-adam.html][https://8bitmilligames.com/store/coleco-adam.html]]
