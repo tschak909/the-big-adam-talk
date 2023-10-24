@@ -24,7 +24,7 @@
 
 - At most, 500,000 made, between 1983 and 1984.
 - Bad repuation due to early production problems
-- Lots of apocryphal bull****!
+- [[file:biggest-pc-duds.png][Lots of apocryphal bull****!]]
   
 ** What is the Coleco Adam?
 
@@ -95,9 +95,9 @@ Came in two varieties:
 - Uses 6801's WAIT-for-break
   to implement a multi device network.
 
-- Disk Drives
+- [[file:disk-drive-front.jpg][Disk Drives]]
 - VDE
-- ADE
+- [[https://diroccovision.com/Coleco/adam/Expansion/FoxADE.jpg][ADE]]
 - Printer
 
 **** [[file:right-expansion.jpg][Right slot]]
@@ -584,3 +584,4 @@ Vendors:
 - https://thebrewingacademy.com/
 - http://fujinet.online/
 - [[https://8bitmilligames.com/store/coleco-adam.html][https://8bitmilligames.com/store/coleco-adam.html]]
+- https://merrickpc.com/coleco-adam/
