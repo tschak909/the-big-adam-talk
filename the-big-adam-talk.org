@@ -31,6 +31,7 @@
 *** [[https://lowendbox.com/wp-content/uploads/2023/07/coleco-adam-closeup.png][The Box]]
 
 - [[file:all-three-boxes.jpg][Freakin' Huge!]]
+- [[https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/393820530_6935719699843079_3443172399603887035_n.jpg?stp=cp6_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=SciXLdmpKxgAX__hajD&_nc_ht=scontent-dfw5-2.xx&oh=00_AfC_FA_3zDsvppyaReIC4zit4v4C89l08EdNv4wlaMfZ9Q&oe=653C2836][Seriously, it's huge.]]
 - Memory console
 - Printer and ephemera
 - Manuals
@@ -115,18 +116,18 @@ Came in two varieties:
 **** Internal Slot 2
 
 - More I/O, some memory mapping
-- Originally intended for Language Cards
-- Now used for I/O and memory addressors
+- Originally intended for [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Coleco/French%20Card.jpg][Language Cards]]
+- Now used for I/O and [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/MicroFox/MF%20Memory.gif][memory addressors]]
 
 **** Internal Slot 3
 
 - Memory addressing, limited I/O
 - Originally intended for [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Exp%20Collage.jpg][64K RAM Expansion]]
-- Now used for larger memory cards, up to [[https://diroccovision.com/Coleco/adam/Pics/Cards/MicroFox/MF%201mb.gif][1MB]]
+- Now used for larger memory cards, up to [[https://diroccovision.com/Coleco/adam/Pics/Cards/MicroFox/MF%201mb.gif][2MB]]
 
 *** [[https://content.invisioncic.com/r322239/monthly_05_2016/post-44577-0-17162700-1462626598.jpg][Keyboard]]
 
-- Keycaps in [[https://en.wikipedia.org/wiki/Handel_Gothic][Handel Gothic]]
+- Keycaps in [[https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Handel_Gothic_Type_Specimen.svg/1920px-Handel_Gothic_Type_Specimen.svg.png][Handel Gothic]]
 - Dome switches
 - 78 keys
 - 6 Function Keys (I-VI)
@@ -151,7 +152,7 @@ Came in two varieties:
 - [[https://diroccovision.com/Coleco/adam/Accessories/PICA.gif][Uses variant of Diablo wheels]]
 - Most common wheel is Courier 72
 - Others include Pica 10, Prestige Elite 12
-- [[https://diroccovision.com/Coleco/adam/Accessories/ColecoVision%20ADAM%20Ribbon.jpg][Has its own ribbon form factor]]
+- [[https://diroccovision.com/Coleco/adam/Accessories/ColecoVision%20ADAM%20Ribbon.jpg][Compatible with Diablo HyType I ribbons]]
 - 80 columns
 - 16 character print buffer
 - 10 characters per second print speed
@@ -195,14 +196,34 @@ Came in two varieties:
 - Press ESCAPE/WP for Word Processor.
 - Any text typed in Typewriter migrates to Word Processor
 
+- Margin/Tab/Etc
 - Screen options
-+ Color
-+ Moving Window
+- Search/Replace
+- Hi-Lite
+- Hi-Lite Erase
+- Super/Subscript
 
 *** Store/Get
+
+- Store and retrieve documents
+- Works with both DDP and Disk
+- Filenames up to 11 characters
+
 *** Editing
+
+- Get Announce
+- Search and replace
+- Store it.
+
 *** Backup Files
+
+- Last edit is backed up
+- Backup File Dir
+
 *** How many pages?
+
+- 16 pages unexpanded
+- 32 pages expanded
 
 ** Storage
 
@@ -248,10 +269,11 @@ Came in two varieties:
 
 **** Using mame castool
 
-*** Disks
+*** Floppy Disks
 
-- Capacities from 160K to 1.44MB
+- Capacities from [[https://diroccovision.com/Coleco/adam/Pics/Expansion/525%20Disk%20Drive.jpg][160K]] to [[https://diroccovision.com/Coleco/adam/Pics/Expansion/MI%20Adam%20net%20Floppy.gif][1.44MB]]
 - Definitely faster than DDP
+- Attaches via [[file:disk-drive-back.jpg][AdamNet.]]
 
 *** [[http://ann.hollowdreams.com/adamsupplies.html][Hard Disk]]
 
