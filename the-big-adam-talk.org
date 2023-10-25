@@ -230,7 +230,7 @@ Came in two varieties:
 
 ** Storage
 
-*** [[https://diroccovision.com/Coleco/adam/Library/Coleco/DDP%202564%20(Solid).jpg][DDPs]]
+*** [[file:ddp-in-case.jpg][DDPs]]
 
 - block oriented
 - PRE-FORMATTED
@@ -239,10 +239,10 @@ Came in two varieties:
   e.g. [[https://diroccovision.com/Coleco/adam/Pics/Cards/Lundy/DD%20MEGACOPY%20REDUX.jpg][(Trisyd MegaCopy)]]
 
 - 256 Kilobytes (256 blocks)
-- 20ips search / 80ips read and write
+- 20ips search / 80ips read and write (V)
 - DON'T LEAVE A TAPE IN DRIVE!
 
-**** DDP Format: Right Directory
+**** [[file:ddp-right.jpg][DDP Format: Right Directory]]
 
 - GW format
 - Block 0 at beginning of tape
@@ -254,7 +254,7 @@ Came in two varieties:
 - Dragons Lair
 - etc
 
-**** DDP Format: Center Directory
+ **** [[file:ddp-center.jpg][DDP Format: Center Directory]]
 
 - HE Format (Howard Eglowstein)
 - Block 0 in center of tape
@@ -270,7 +270,32 @@ Came in two varieties:
 
 **** [[http://adamarchive.org/archive/Technical/ADAM%20Mods/Audio%20Cassette%20Tape%20to%20a%20ADAM%20DDP%20Pack%21%21%20v2.2.pdf][Adapting Standard Tapes]]
 
+- Use 60 minute Type 1 tapes
+- Drill alignment holes
+  
+- Three methods of formatting
+  
+--------------------------------------
++ Trisyd Megacopy
++ Dubbing using standard cassette deck
++ MAME castool wav to tape
+--------------------------------------
+  
 **** Using mame castool
+
+- Get MAME from http://mamedev.org/
+- Run castool
+
+#+begin_src sh
+$ dd if=/dev/zero of=blank-center.ddp bs=1 count=262144
+$ ./castool convert ddp blank-center.ddp blank-center.wav
+#+end_src
+
+- Use your favorite tool to record to tape
+
+#+begin_src sh
+$ audacity blank-center.wav
+#+end_src
 
 *** Floppy Disks
 
@@ -284,6 +309,7 @@ Came in two varieties:
 - Much Faster than floppies or DDPs
 - Connect via Internal card or AdamNet
 - Handle CP/M or EOS volumes
+- Quick demo using AdamEm
 
 *** [[https://fujinet.online/wp-content/uploads/2022/03/ADAM-FujiNet-v1.0-CONFIG.jpg][Modern Solutions (ADE and FujiNet)]]
 
@@ -292,6 +318,7 @@ Came in two varieties:
 - Mount images in one of four device IDs
 - Handles DDP, DSK, and ROMs
 - FujiNet adds network storage and applications
+- Quick boot of Buck Rogers over Internet
 
 *** Comparison of capacities
 
@@ -309,7 +336,9 @@ Came in two varieties:
 - Elementary
 - In ROM
 - Sequential
-- FLAT
+- Only Contiguous blocks
+- FLAT FILESYSTEM
+- Last file on tape assumed to have rest of tape capacity
 - 12 Char Filenames
   - 11 Char name
   - 1 Char type
@@ -414,7 +443,9 @@ Came in two varieties:
 
 ** [[https://diroccovision.com/Coleco/adam/Library/Coleco/LOGO/LOGO%207600%20(R).jpg][SmartLOGO]]
 
-*** CS
+- Done by LCSI, who also did Apple2 and Atari versions
+- 31 sprites
+- sound
 
 *** TO SQUARE
 
@@ -496,9 +527,21 @@ END
 ** Comparing Games against Super Games
 
 *** Buck Rogers: Planet of Zoom
+
+- More levels
+- Redesigned enemies
 *** Donkey Kong
+
+- All the levels of the arcade
+
 *** Donkey Kong Jr.
+
+- All the levels of the arcade version
+- Prototype with additional Pie Factory level
+
 *** Zaxxon
+
+- All the levels of the arcade version
 
 ** ColecoVision Games
 
