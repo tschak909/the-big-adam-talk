@@ -1,4 +1,4 @@
-* The Big Coleco Adam Info-Dump
+* I. Overview
 
 ** Audience
 
@@ -28,6 +28,14 @@
   
 ** What is the Coleco Adam?
 
+- A computer
+- With Data Storage
+- And a Printer
+- And a ColecoVision
+
+- Stuffed in a box
+  that makes train sets look small.
+  
 *** [[https://lowendbox.com/wp-content/uploads/2023/07/coleco-adam-closeup.png][The Box]]
 
 - [[file:all-three-boxes.jpg][Freakin' Huge!]]
@@ -169,6 +177,7 @@ Came in two varieties:
   
 - Hollow platen (LOUD!)
 
+* II. Demos
 
 ** Turning it on
 
@@ -610,7 +619,310 @@ END
 - File transfer over modern protocols
 
 
-* References
+* III. Programming
+
+** Overview
+
+- Z80 at 3.58MHz
+- TMS99x8A VDP with 16K of VRAM
+- Can treat as ColecoVision or Adam
+- Adam boots block 0 at C800H
+  
+- Can use OS7, SmartWriter, or EOS
+  by switching in apropos MIOC bank
+
+- Can develop natively or cross
+
+** MIOC Memory maps
+
+- MIOC splits 64K address space in half
+
+| Mode | Lower                   | Upper             |
+|------+-------------------------+-------------------|
+|    0 | SmartWriter and EOS     | 32K Intrinsic RAM |
+|    1 | 32K Intrinsic RAM       | 32K Intrinsic RAM |
+|    2 | 32K Expansion RAM       | 32K Intrinsic RAM |
+|    3 | OS7 + 24K Intrinsic RAM | 32K Intrinsic RAM |
+|    4 | SmartWriter and EOS     | Expansion ROM     |
+|    5 | 32K Intrinsic RAM       | Expansion ROM     |
+|    6 | 32K Expansion ROM       | Expansion ROM     |
+|    7 | OS7 + 24K Intrinsic RAM | Expansion ROM     |
+|    8 | SmartWriter and EOS     | Expansion RAM     |
+|    9 | 32K Intrinsic RAM       | Expansion RAM     |
+|   10 | 32K Expansion RAM       | Expansion RAM     |
+|   11 | OS7 + 24K Intrinsic RAM | Expansion RAM     |
+|   12 | SmartWriter and EOS     | Cartridge ROM     |
+|   13 | 32K Intrinsic RAM       | Cartridge ROM     |
+|   14 | 32K Expansion RAM       | Cartridge ROM     |
+|   15 | OS7 + 24K Intrinsic RAM | Cartrifge ROM     |
+
+- Port $42 can select other Expansion RAM banks
+  on systems with an addressor card
+
+- Super Games use mode 3 for 52K of usable memory
+  and access to OS7 routines
+
+- COLECO applications often switch into SmartWriter
+  to use text display routines
+  
+** Hellorld in C
+
+*** Building Z88DK
+
+#+begin_src sh
+
+  # Instructions for Ubuntu 
+  git clone --recursive https://github.com/z88dk/z88dk.git
+  sudo apt install build-essential bison flex libxml2-dev subversion zlib1g-dev m4 ragel re2c dos2unix texinfo texi2html gdb curl perl cpanminus ccache libboost-all-dev libmodern-perl-perl libyaml-perl liblocal-lib-perl libcapture-tiny-perl libpath-tiny-perl libtext-table-perl libdata-hexdump-perl libregexp-common-perl libclone-perl libfile-slurp-perl pkg-config
+  cpanm --local-lib=~/perl5 App::Prove CPU::Z80::Assembler Data::Dump Data::HexDump File::Path List::Uniq Modern::Perl Object::Tiny::RW Regexp::Common Test::Harness Text::Diff Text::Table YAML::Tiny
+  eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
+
+  cd z88dk
+  export BUILD_SDCC=1
+  export BUILD_SDCC_HTTP=1
+  chmod 777 build.sh
+  ./build.sh
+  
+  . ./set_environment.sh
+
+#+end_src
+
+*** Building eoslib
+
+- C bindings for the EOS
+  
+#+begin_src sh
+
+  # instructions for ubuntu
+  git clone https://github.com/tschak909/eoslib.git
+  cd eoslib
+  make
+  cp src/eos.h ../z88dk/include/
+  cp eos.lib ../z88dk/lib/clibs/
+
+#+end_src
+
+*** Building smartkeyslib
+
+- Adds routines to draw SmartKeys
+
+#+begin_src sh
+
+  # instructions for ubuntu
+  git clone https://github.com/tschak909/smartkeyslib.git
+  cd smartkeyslib
+  make
+  cp src/smartkeys.h ../z88dk/include/
+  cp smartkeys.lib ../z88dk/lib/clibs/
+
+#+end_src
+
+*** Building os7lib
+
+- C bindings for OS7
+
+#+begin_src sh
+
+  git clone https://github.com/tschak909/os7lib.git
+  cd os7lib
+  make
+  cp src/os7.h ../z88dk/include/
+  cp os7.lib ../z88dk/lib/clibs/
+
+#+end_src
+
+*** Writing hellorld
+
+#+begin_src C :includes <eos.h>
+
+  #include <eos.h>
+
+  unsigned char hellorld[768]="HELLORLD!";
+
+  void main(void)
+  {
+    eos_load_ascii_in_vdp(); // load ascii patterns
+    eos_write_vram(sizeof(hellorld),0x1800,hellorld); // put message in nametable
+    while(1); // sit and spin.
+  }
+
+#+end_src
+
+*** Building hellorld
+
+#+begin_src sh
+
+  zcc +coleco -subtype=adam -create-app -ohello.ddp hello.c -leos
+
+#+end_src
+
+** Hellorld in ASM
+
+*** Writing hellorld
+
+#+begin_src asm
+
+EosStart        EQU     0fc30h  ;EOSStart: reset EOS
+ConsDisp        EQU     0fc33h  ;ConsoleDisplay: A=character to display (raw output)
+ConsInit        EQU     0fc36h  ;ConsoleInitialize: D=top E=left B=width C=height HL=start
+ConsOut         EQU     0fc39h  ;ConsOut: A=character to display, with escape characters
+ReadKeyboard    EQU     0fc6ch  ;ReadKeyboard: Returns A=key
+GotoWP          EQU     0fce7h  ;GotoWP: Starts SmartWRITER
+PutAscii        EQU     0fd17h  ;PutASCII: Fills out characters 0x20 to 0x7e
+WriteReg        EQU     0fd20h  ;WriteVDPRegister: B=reg, C=value
+FillVRam        EQU     0fd26h  ;FillVRam: HL=start, A=character, DE=length
+WriteVRam       EQU     0fd1ah  ;WriteVRam: HL=ram address, BC=length, DE=vram address
+ReadVRam        EQU     0fd1dh  ;ReadVRam: HL=ram address, BC=length, DE=vram address
+InitTable       EQU     0fd29h  ;InitializeVDPTable: A=table #, HL=location
+LoadAscii       EQU     0fd38h  ;LoadASCII: HL=first character, BC=count of characters, DE=vram destination
+Read1Block      EQU     0fcf3h  ;Actually ReadBlock Input: A=device, HL=memory, BCDE=block
+Write1Block     EQU     0fcf6h  ;Actually WriteBlock Output: A=device, HL=memory, BCDE=block
+CurrentDev      EQU     0fd6fh  ;Current device ID
+DiskA           EQU     04h
+DiskB           EQU     05h
+TapeA           EQU     08h
+TapeB           EQU     18h
+
+NameTable	EQU	2
+PatternTable	EQU	3
+ColorTable	EQU	4
+
+DefPatternTable EQU     0h
+DefNameTable    EQU     1800h
+DefSprAttrTable EQU     1b00h
+DefColorTable   EQU     2000h
+DefSprPatTable  EQU     3800h
+
+NUM_BLOCKS	EQU	1	; # of blocks to load
+	
+	;; Hello world
+
+	ORG	$0100	; At very top of RAM
+
+	;; First fill out the vectors
+
+START:
+	;; Set mode M2
+
+	LD	B,0		; M2
+	XOR	C		; To zero
+	CALL	WriteReg	; Write VDP register
+
+	;; Set Mode M1
+
+	LD	B,1		; M1
+	LD	C,0C0H		; Mode 1, no interrupts
+	CALL	WriteReg	; Write VDP register
+	
+	;; Set border
+	
+	LD	B,7		; border
+	LD	C,4		; Dark Blue
+	CALL	WriteReg	; Write VDP register
+
+	;; Clear out VRAM
+
+	LD	HL,$0000	; top of VRAM
+	LD	DE,$4000	; All of it
+	LD	A,$00		; Zero it out
+	CALL	FillVRam	; call VRAM
+	
+	;; Set table locations
+	
+	LD	A,PatternTable
+	LD	HL,DefPatternTable
+	CALL	InitTable
+
+	LD	A,NameTable
+	LD	HL,DefNameTable
+	CALL	InitTable
+
+	LD	A,ColorTable
+	LD	HL,DefColorTable
+	CALL	InitTable
+
+	;;  Set blue on white for all patterns
+	
+	LD	HL,DefColorTable ; Color table
+	LD	DE,32		 ; Mode 1 color table is 32 entries long
+	LD	A,0xF4		 ; F = White, 4 = dark blue
+	CALL	FillVRam	 ; Call fill vram
+
+	;; Put HELLORLD on screen via WriteVram
+	
+	CALL	LoadAscii	; Put ASCII TABLE into VDP
+	LD	HL,HELLORLD	; ptr to HELLORLD screen in HL
+	LD	BC,9		; 9 bytes long
+	LD	DE,DefNameTable	; Put into nametable in VRAM
+	CALL	WriteVRam	; Write it to VRAM
+
+LOOP:	JP	LOOP
+
+HELLORLD:	
+	DEFM	"HELLORLD!"
+
+;;; ------------------------------------------------------------------
+
+	SECTION     BOOTSTRAP
+
+	ORG     $C800		; Adam loads block 0 here.
+	
+Boot:
+	LD      A,B
+	LD      (CurrentDev),A
+
+start_loading:
+	LD      A,@00000001     ; 64k of intrinsic RAM everywhere
+	OUT     ($7f),A	    	; and write to MIOC port
+
+	;; Each block is 1k in size
+	
+	LD      B,NUM_BLOCKS	; # of blocks to load
+	LD      HL,$0100	; put at top of memory
+	LD      DE,1           	; Block number
+
+load_loop:
+	PUSH    BC
+	PUSH    DE
+	PUSH    HL
+	LD      A,(CurrentDev)
+	LD      BC,0
+	CALL    Read1Block
+	POP     HL
+	LD      A,H
+	ADD     4		; *= $0400 (1024)
+	LD      H,A
+	POP     DE
+	INC     DE
+	POP     BC
+	DJNZ    load_loop
+
+load_done:	
+	LD      A,(CurrentDev)
+	LD      B,A
+	JP	START
+
+;;; ------------------------------------------------------------------
+
+#+end_src
+
+*** Building hellorld
+
+- Build binary with z88dk-z80asm
+- Package binary with bootstrap with z88dk-appmake
+  into DDP image
+    
+#+begin_src sh
+
+  # -b means absolute binary
+  z88dk-z80asm -b adam.asm
+
+  # -b means input binary, -zorg means don't apply org address.
+  z88dk-appmake +adam -zorg -b adam.bin
+
+#+end_src
+
+* III. References
 
 Information:
 - http://www.diroccovision.com/
@@ -628,3 +940,19 @@ Vendors:
 - http://fujinet.online/
 - [[https://8bitmilligames.com/store/coleco-adam.html][https://8bitmilligames.com/store/coleco-adam.html]]
 - https://merrickpc.com/coleco-adam/
+
+Technical Manuals:
+- https://archive.org/details/coleco-adam-technical-reference-manual
+- http://www.adamcon.org/eosprogman.html
+
+TMS 9918A Data book:
+- https://archive.org/details/bitsavers_tiTMS9900T_5911832/
+
+Canonical ROM Listings:
+- https://archive.org/details/coleco-adam-technical-manual-eos6-os7/
+
+Programming:
+- http://www.z88dk.org/
+- https://www.github.com/tschak909/os7lib
+- https://www.github.com/tschak909/eoslib
+- https://www.github.com/tschak909/smartkeyslib
