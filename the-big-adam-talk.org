@@ -612,6 +612,8 @@ $ audacity blank-center.wav
 
 *** AdamNet
 
+**** Overview
+
 - Two AdamNet ports
   One in front
   One on the left side
@@ -640,6 +642,66 @@ $ audacity blank-center.wav
 - [[https://fujinet.online/wp-content/uploads/2022/03/ADAM-FujiNet-v1.0-CONFIG.jpg][FujiNet]]
 - Printer
 
+**** Master 6801
+
+- Handles all comms to peripherals
+- Connected to Z80 via MIOC
+- MIOC provides DMA channel from 6801 to Z80 RAM
+- Watches area of memory called PCB
+- PCB holds # of devices, and their DCBs
+- Writing to a DCB causes 6801 to emit an AdamNet command
+- Reading DCB can get status
+- Status sets bit 7 to indicate completion.
+- Reading and Writing are asynchronous
+- No Queue
+- PCB is $FEC0, by default. 
+
+**** Peripheral 6801s
+
+- Inside each peripheral
+  - DDP (on I/O board)
+  - Floppy Drive
+  - Printer
+
+- Contains 2K of ROM
+  
+- NIM (Network Interface Module) 1K of ROM
+- Listens for traffic on AdamNet wire
+- Read upper nibble (is this for me?)
+  
+- If traffic for me, process the rest of the packet
+  Send off to application (the other 1K of ROM)
+
+- Otherwise set WAIT in 6801 TCR
+  which waits until line goes quiet (a break)
+  and NIM listens again for traffic.
+
+**** AdamNet Packet Types
+
+| Nibble | Type                                     |
+|--------+------------------------------------------|
+|     0x | RESET the device                         |
+|     1x | Return device status                     |
+|     2x | Adam acknowledges packet                 |
+|     3x | Adam is ready for send response          |
+|     4x | Adam is asking for data from peripheral  |
+|     5x | Adam is asking for device to cancel (NI) |
+|     6x | Adam Data->Peripheral                    |
+|     7x | Adam NAK data from peripheral            |
+|     8x | Peripheral status response               |
+|     9x | Peripheral acks packet from Adam         |
+|     Ax | Peripheral asking for cancel (NI)        |
+|     B0 | Peripheral sending data to Adam          |
+|     C0 | Peripheral NACKing packet from Adam      |
+|     D0 | Peripheral ready?                        |
+
+**** AdamNet Reset
+
+- Synchronize 6801 clock with Z80 clock
+- Ask all 15 possible devices for status
+- For any responses recieved:
+  Set up a DCB for them in memory.
+  
 *** [[file:right-expansion.jpg][Right slot]]
 
 - Exactly like ColecoVision Expansion slot
@@ -996,12 +1058,16 @@ Technical Manuals:
 - https://archive.org/details/coleco-adam-technical-reference-manual
 - http://www.adamcon.org/eosprogman.html
 
+About AdamNet:
+- http://adamarchive.org/archive/Technical/ADAM%20Tech%20Manuals/All%20About%20ADAMnet%20%28Thomas%20Cherryhomes%29.pdf
+
 TMS 9918A Data book:
 - https://archive.org/details/bitsavers_tiTMS9900T_5911832/
 
 Canonical ROM Listings:
 - https://archive.org/details/coleco-adam-technical-manual-eos6-os7/
-
+- http://adamarchive.org/archive/Technical/ADAM%20Source%20Code/ADAM%206801s%20-%20Listings%20and%20Source%20Code.zip
+  
 Programming:
 - http://www.z88dk.org/
 - https://www.github.com/tschak909/os7lib
