@@ -1,13 +1,17 @@
 * I. Overview
+
 ** Audience
 
 - Those who have heard of Adam.
 - Those who haven't heard of Adam.
 - Those who want a comprehensive run-through.
+- And some more detail.
+  
 ** Commercials
 
 - Stand-Alone Adam (is that Legal?)
 - Expansion Module #3
+
 ** Why?
 
 - [[https://i.ebayimg.com/images/g/PbkAAOSwx-9in4ST/s-l1200.webp][Market to Little Billy]]
@@ -16,11 +20,13 @@
 - $400 if you had a ColecoVision (EM#3)
 - [[https://diroccovision.com/Coleco/adam/Pics/Hardware/Coleco%20ADAM%20Master%20Box%202412%20Internal%201.jpg][Including a printer IN THE BOX!]]
 - Why "Tape?" [[https://archive.org/details/creativecomputing-1983-01/page/n243/mode/2up][Disk drives were EXPENSIVE!]]
+
 ** No. Why do this video?
 
 - At most, 500,000 made, between 1983 and 1984.
 - Bad repuation due to early production problems
 - [[file:biggest-pc-duds.png][Lots of apocryphal bull****!]]
+
 ** What is the Coleco Adam?
 
 - A computer
@@ -53,6 +59,7 @@ Came in two varieties:
 
 - [[https://content.invisioncic.com/r322239/monthly_07_2011/post-25956-0-70461600-1309666509.jpg][Stand-Alone]] ($700)
 - [[http://dunfield.classiccmp.org/adam/h/e3.jpg][Expansion Module #3 for ColecoVision ($500)]]
+
 *** Specs
 
 - 64K of DRAM
@@ -115,6 +122,7 @@ Came in two varieties:
   
 - Hollow platen (LOUD!)
   
+
 * II. Demos
 
 ** Turning it on
@@ -423,6 +431,7 @@ END
 - Sections that needed more detail
   
 ** Storage
+
 *** [[https://thumbs.worthpoint.com/zoom/images3/1/0316/23/adam-vintage-computer-blank-high_1_22fe559b96b77108048653093b2e5994.jpg][DDPs]]
 
 - block oriented
@@ -439,10 +448,12 @@ END
 
 Layout:
 
+#+BEGIN_EXAMPLE
 <-- TAPE MOTION
 0              40            7F
 ===============================
 80             C0            FF
+#+END_EXAMPLE
 
 - GW format
 - Block 0 at beginning of tape
@@ -456,10 +467,12 @@ Layout:
 
 **** [[https://i95.servimg.com/u/f95/15/46/86/41/adam-v10.jpg][DDP Format: Center Directory]]
 
+#+BEGIN_EXAMPLE
 <-- TAPE MOTION
 40          7F 0             3F
 ===============================
 80          BF C0            FF
+#+END_EXAMPLE
 
 - HE Format (Howard Eglowstein)
 - Block 0 in center of tape
@@ -478,7 +491,7 @@ Layout:
 
 - Use 60 minute Type 1 tapes
 - Drill alignment holes
-  
+- Milli Hicks made a great [[https://www.youtube.com/watch?v=dXn1-DlZPk8][video]]  
 - Three methods of formatting
   
 --------------------------------------
@@ -554,11 +567,14 @@ $ audacity blank-center.wav
 - EOS 5 can do 4.3T volumes
 - EOS 6 can do 64MB volumes
 
-****  AJM File Manager Demo
+***** AJM File Manager Demo
 
 - Showing EOS file directories
 - Copying document from tape to disk
 - Showing that tapes
+
+***** Showing Wasted space on tape
+
 **** [[https://diroccovision.com/Coleco/adam/Library/Coleco/CPM/CPM%20%207832.jpg][CP/M]]
 
 - CP/M Version 2.2
@@ -591,7 +607,9 @@ $ audacity blank-center.wav
 - Supports EVE 80 column expansion
 - Supports MIB serial/parallel card
 
+
 ** [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Slots/SLOT%203_1.gif][Expansion]]
+
 *** AdamNet
 
 - Two AdamNet ports
@@ -649,6 +667,8 @@ $ audacity blank-center.wav
 - Memory addressing, limited I/O
 - Originally intended for [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Exp%20Collage.jpg][64K RAM Expansion]]
 - Now used for larger memory cards, up to [[https://diroccovision.com/Coleco/adam/Pics/Cards/MicroFox/MF%201mb.gif][8MB]]
+
+
 * IV. Programming
 
 ** Overview
@@ -952,6 +972,7 @@ load_done:
 
 #+end_src
 
+
 * V. References
 
 Information:
@@ -989,4 +1010,4 @@ Programming:
 
 Adapting Existing Audio Tapes:
 - http://adamarchive.org/archive/Technical/ADAM%20Mods/Audio%20Cassette%20Tape%20to%20a%20ADAM%20DDP%20Pack%21%21%20v2.2.pdf
-  
+- https://www.youtube.com/watch?v=dXn1-DlZPk8
