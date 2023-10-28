@@ -1,16 +1,13 @@
 * I. Overview
-
 ** Audience
 
 - Those who have heard of Adam.
 - Those who haven't heard of Adam.
 - Those who want a comprehensive run-through.
-
 ** Commercials
 
 - Stand-Alone Adam (is that Legal?)
 - Expansion Module #3
-
 ** Why?
 
 - [[https://i.ebayimg.com/images/g/PbkAAOSwx-9in4ST/s-l1200.webp][Market to Little Billy]]
@@ -19,13 +16,11 @@
 - $400 if you had a ColecoVision (EM#3)
 - [[https://diroccovision.com/Coleco/adam/Pics/Hardware/Coleco%20ADAM%20Master%20Box%202412%20Internal%201.jpg][Including a printer IN THE BOX!]]
 - Why "Tape?" [[https://archive.org/details/creativecomputing-1983-01/page/n243/mode/2up][Disk drives were EXPENSIVE!]]
-
 ** No. Why do this video?
 
 - At most, 500,000 made, between 1983 and 1984.
 - Bad repuation due to early production problems
 - [[file:biggest-pc-duds.png][Lots of apocryphal bull****!]]
-  
 ** What is the Coleco Adam?
 
 - A computer
@@ -35,7 +30,7 @@
 
 - Stuffed in a box
   that makes train sets look small.
-  
+
 *** [[https://lowendbox.com/wp-content/uploads/2023/07/coleco-adam-closeup.png][The Box]]
 
 - [[file:all-three-boxes.jpg][Freakin' Huge!]]
@@ -58,7 +53,6 @@ Came in two varieties:
 
 - [[https://content.invisioncic.com/r322239/monthly_07_2011/post-25956-0-70461600-1309666509.jpg][Stand-Alone]] ($700)
 - [[http://dunfield.classiccmp.org/adam/h/e3.jpg][Expansion Module #3 for ColecoVision ($500)]]
-
 *** Specs
 
 - 64K of DRAM
@@ -80,62 +74,6 @@ Came in two varieties:
 - (1) OS7 ROM (the ColecoVision BIOS)
 - (1) SmartWriter ROM (Word Processor)
   
-*** [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Slots/SLOT%203_1.gif][Expansion]]
-
-**** AdamNet
-
-- Two AdamNet ports
-  One in front
-  One on the left side
-  (Actually, the printer connection too)
-
-- [[https://i.ebayimg.com/images/g/674AAOSwiBZkixCq/s-l1200.jpg][Uses Standard 6P6C cross-wired cabling]]
-- [[file:disk-drive-back.jpg][Peripherals are daisy chained]]
-- [[https://i.ebayimg.com/images/g/THsAAOSw4NZbdTy-/s-l1600.jpg][Passive T-Adapters for more ports]]
-
-- 62,500 bits per second
-- One Wire for RX/TX
-
-- Inverted; open-collector
-  (the bus is high if all connected devices are high,
-  and the bus is low if any device drives a zero.)
-
-- Uses 6801's WAIT-for-break
-  to implement a multi device network.
-
-- [[file:disk-drive-front.jpg][Disk Drives]]
-- VDE
-- [[https://diroccovision.com/Coleco/adam/Expansion/FoxADE.jpg][ADE]]
-- Printer
-
-**** [[file:right-expansion.jpg][Right slot]]
-
-- Exactly like ColecoVision Expansion slot
-- [[https://i.ytimg.com/vi/aYywqZp-uBY/maxresdefault.jpg][Expansion #1 for Atari VCS (2600)]]
-- [[https://thumbs.worthpoint.com/zoom/images3/1/0716/17/address-book-filer-auto-dialer-coleco_1_e6c852f8f9a143e8d6d3831ec60c6786.jpg][AutoDialer]]
-- [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Other/Orphanware%2080%20Column%20Video.gif][OrphanWare 80 Column]]
-- EVE SP-1
-- etc...
-
-**** Internal Slot 1
-
-- Limited I/O
-- Intended for AdamLink [[https://i.pinimg.com/736x/6c/48/c0/6c48c03e2950380ece9c468509343807--modem-instruments.jpg][MODEM]]
-- [[https://diroccovision.com/Coleco/adam/Pics/Cards/MI/MI%20Dual%20Serial.gif][MI Dual Serial Interface]]
-- [[https://diroccovision.com/Coleco/adam/Pics/Cards/MI/MI%20Powermate%20Host.jpg][MI and MicroFox IDE Hard Disk Adapters]]
-  
-**** Internal Slot 2
-
-- More I/O, some memory mapping
-- Originally intended for [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Coleco/French%20Card.jpg][Language Cards]]
-- Now used for I/O and [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/MicroFox/MF%20Memory.gif][memory addressors]]
-
-**** Internal Slot 3
-
-- Memory addressing, limited I/O
-- Originally intended for [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Exp%20Collage.jpg][64K RAM Expansion]]
-- Now used for larger memory cards, up to [[https://diroccovision.com/Coleco/adam/Pics/Cards/MicroFox/MF%201mb.gif][2MB]]
-
 *** [[https://content.invisioncic.com/r322239/monthly_05_2016/post-44577-0-17162700-1462626598.jpg][Keyboard]]
 
 - Keycaps in [[https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Handel_Gothic_Type_Specimen.svg/1920px-Handel_Gothic_Type_Specimen.svg.png][Handel Gothic]]
@@ -176,11 +114,14 @@ Came in two varieties:
   For superscripts and subscripts
   
 - Hollow platen (LOUD!)
-
+  
 * II. Demos
 
 ** Turning it on
 
+- Flip the switch
+  on the back of the printer.
+  
 *** SmartWriter (more later)
 
 - If nothing to boot, goes into SmartWriter
@@ -236,156 +177,6 @@ Came in two varieties:
 
 - 16 pages unexpanded
 - 32 pages expanded
-
-** Storage
-
-*** [[file:ddp-in-case.jpg][DDPs]]
-
-- block oriented
-- PRE-FORMATTED
-
-- Not User Formattable without help!
-  e.g. [[https://diroccovision.com/Coleco/adam/Pics/Cards/Lundy/DD%20MEGACOPY%20REDUX.jpg][(Trisyd MegaCopy)]]
-
-- 256 Kilobytes (256 blocks)
-- 20ips search / 80ips read and write (V)
-- DON'T LEAVE A TAPE IN DRIVE!
-
-**** [[file:ddp-right.jpg][DDP Format: Right Directory]]
-
-- GW format
-- Block 0 at beginning of tape
-- Used by Super Games
-
-- Buck Rogers: Planet of Zoom
-- Donkey Kong
-- Donkey Kong Jr.
-- Dragons Lair
-- etc
-
- **** [[file:ddp-center.jpg][DDP Format: Center Directory]]
-
-- HE Format (Howard Eglowstein)
-- Block 0 in center of tape
-- Faster directory block access
-- Used by SmartBASIC and EOS tapes
-
-**** DDPs versus Standard Tapes
-
-- DDP: Thicker Lexan(tm) cassette shell
-- DDP: Lubricated rollers in shell
-- DDP: Tighter mechanical tolerances; smoother.
-- DDP: Holes in different places
-
-**** [[http://adamarchive.org/archive/Technical/ADAM%20Mods/Audio%20Cassette%20Tape%20to%20a%20ADAM%20DDP%20Pack%21%21%20v2.2.pdf][Adapting Standard Tapes]]
-
-- Use 60 minute Type 1 tapes
-- Drill alignment holes
-  
-- Three methods of formatting
-  
---------------------------------------
-+ Trisyd Megacopy
-+ Dubbing using standard cassette deck
-+ MAME castool wav to tape
---------------------------------------
-  
-**** Using mame castool
-
-- Get MAME from http://mamedev.org/
-- Run castool
-
-#+begin_src sh
-$ dd if=/dev/zero of=blank-center.ddp bs=1 count=262144
-$ ./castool convert ddp blank-center.ddp blank-center.wav
-#+end_src
-
-- Use your favorite tool to record to tape
-
-#+begin_src sh
-$ audacity blank-center.wav
-#+end_src
-
-*** Floppy Disks
-
-- Capacities from [[https://diroccovision.com/Coleco/adam/Pics/Expansion/525%20Disk%20Drive.jpg][160K]] to [[https://diroccovision.com/Coleco/adam/Pics/Expansion/MI%20Adam%20net%20Floppy.gif][1.44MB]]
-- Definitely faster than DDP
-- Attaches via [[file:disk-drive-back.jpg][AdamNet.]]
-
-*** [[http://ann.hollowdreams.com/adamsupplies.html][Hard Disk]]
-
-- Larger
-- Much Faster than floppies or DDPs
-- Connect via Internal card or AdamNet
-- Handle CP/M or EOS volumes
-- Quick demo using AdamEm
-
-*** [[https://fujinet.online/wp-content/uploads/2022/03/ADAM-FujiNet-v1.0-CONFIG.jpg][Modern Solutions (ADE and FujiNet)]]
-
-- Connect via AdamNet
-- Uses SD cards
-- Mount images in one of four device IDs
-- Handles DDP, DSK, and ROMs
-- FujiNet adds network storage and applications
-- Quick boot of Buck Rogers over Internet
-
-*** Comparison of capacities
-
-- Adam thinks of media in 1024 byte blocks
-- DDP drives have 256 blocks
-- [[https://diroccovision.com/Coleco/adam/Pics/Expansion/525%20Disk%20Drive.jpg][Original Coleco drives have 160 blocks]]
-- [[https://content.invisioncic.com/r322239/monthly_08_2017/post-10892-0-07950100-1503737482.jpg][Micro Innovations 5¼ Floppy Drive had 320 blocks]]
-- [[https://content.invisioncic.com/r322239/monthly_08_2017/post-10892-0-27176300-1503737664.jpg][Micro Innovation 3½ Floppy Drive had 720 blocks]]
-- Micro Innovation also did a 1.44MB 3½ drive. 1440 blocks
-
-*** Filesystems
-
-**** EOS
-
-- Elementary
-- In ROM
-- Sequential
-- Only Contiguous blocks
-- FLAT FILESYSTEM
-- Last file on tape assumed to have rest of tape capacity
-- 12 Char Filenames
-  - 11 Char name
-  - 1 Char type
-- Pre-allocated
-- EOS 5 can do 4.3T volumes
-- EOS 6 can do 64MB volumes
-
-**** [[https://diroccovision.com/Coleco/adam/Library/Coleco/CPM/CPM%20%207832.jpg][CP/M]]
-
-- CP/M Version 2.2
-- Supports 160K Disk
-- Supports 256K DDP
-- Supports 64K RAM Disk
-- Supports Printer
-- Supports AdamNet Serial Interface
-- Emulates VT-52 (H19) terminal
-- Scrolling 80 column window
-- Smart Key display
-- Thousands of CP/M programs
-- Includes transfer programs
-- Includes backup utility
-- Includes Formatter for disk/tape
-- Includes Sysgen
-- Includes Config
-- Can be patched for other capacities
-
-**** T-DOS
-
-- CP/M Replacement
-- By Tony Morehen and Guy Cousineau
-- 40 column text mode
-- 80 column virtual display
-- Supports more disk capacities
-- Supports Microfox IDE Hard Disk
-- Supports directories
-- Supports time-stamps
-- Supports EVE 80 column expansion
-- Supports MIB serial/parallel card
 
 ** SmartBASIC
 
@@ -487,15 +278,18 @@ END
 - Comparable with VisiCalc
 - 255 Rows, 255 columns
 - Easy to use
-
+- On-Line Help
+- Calculator applet
 *** [[https://diroccovision.com/Coleco/adam/Library/Coleco/SmartFILER/SmartFiler%207813%20(R).jpg][SmartFiler]]
 
 - Simple ISAM Database application
 - Indexable Character and Number types
   Maximum 255 characters for all
+
 - Non-Indexable Text type
   Two type-written pages of information
   Must be last field on form
+
 - First field is the primary key
 
 *** [[https://diroccovision.com/Coleco/adam/Library/Coleco/RecipeFiler/RecipeFiler%207814%20(R).jpg][Recipe Filer]]
@@ -539,18 +333,22 @@ END
 
 - More levels
 - Redesigned enemies
+- Hall of Fame
 *** Donkey Kong
 
 - All the levels of the arcade
+- Hall of Fame
 
 *** Donkey Kong Jr.
 
 - All the levels of the arcade version
+- Hall of Fame
 - Prototype with additional Pie Factory level
 
 *** Zaxxon
 
 - All the levels of the arcade version
+- Hall of Fame
 
 ** ColecoVision Games
 
@@ -619,7 +417,239 @@ END
 - File transfer over modern protocols
 
 
-* III. Programming
+
+* III. Detail
+
+- Sections that needed more detail
+  
+** Storage
+*** [[https://thumbs.worthpoint.com/zoom/images3/1/0316/23/adam-vintage-computer-blank-high_1_22fe559b96b77108048653093b2e5994.jpg][DDPs]]
+
+- block oriented
+- PRE-FORMATTED
+
+- Not User Formattable without help!
+  e.g. [[https://diroccovision.com/Coleco/adam/Pics/Cards/Lundy/DD%20MEGACOPY%20REDUX.jpg][(Trisyd MegaCopy)]]
+
+- 256 Kilobytes (256 blocks)
+- 20ips search / 80ips read and write (V)
+- DON'T LEAVE A TAPE IN DRIVE!
+
+**** [[https://content.invisioncic.com/r322239/monthly_08_2018/post-41189-0-31121700-1534086432.jpg][DDP Format: Right Directory]]
+
+Layout:
+
+<-- TAPE MOTION
+0              40            7F
+===============================
+80             C0            FF
+
+- GW format
+- Block 0 at beginning of tape
+- Used by Super Games
+
+- Buck Rogers: Planet of Zoom
+- Donkey Kong
+- Donkey Kong Jr.
+- Dragons Lair
+- etc
+
+**** [[https://i95.servimg.com/u/f95/15/46/86/41/adam-v10.jpg][DDP Format: Center Directory]]
+
+<-- TAPE MOTION
+40          7F 0             3F
+===============================
+80          BF C0            FF
+
+- HE Format (Howard Eglowstein)
+- Block 0 in center of tape
+- Block 1 is Directory
+- Faster directory block access
+- Used by SmartBASIC and EOS tapes
+
+**** DDPs versus Standard Tapes
+
+- DDP: Thicker Lexan(tm) cassette shell
+- DDP: Lubricated rollers in shell
+- DDP: Tighter mechanical tolerances; smoother.
+- DDP: Holes in different places
+
+**** [[http://adamarchive.org/archive/Technical/ADAM%20Mods/Audio%20Cassette%20Tape%20to%20a%20ADAM%20DDP%20Pack%21%21%20v2.2.pdf][Adapting Standard Tapes]]
+
+- Use 60 minute Type 1 tapes
+- Drill alignment holes
+  
+- Three methods of formatting
+  
+--------------------------------------
++ Trisyd Megacopy
++ Dubbing using standard cassette deck
++ MAME castool wav to tape
+--------------------------------------
+  
+**** Using mame castool
+
+- Get MAME from http://mamedev.org/
+- Run castool
+
+#+begin_src sh
+$ dd if=/dev/zero of=blank-center.ddp bs=1 count=262144
+$ ./castool convert ddp blank-center.ddp blank-center.wav
+#+end_src
+
+- Use your favorite tool to record to tape
+
+#+begin_src sh
+$ audacity blank-center.wav
+#+end_src
+
+*** Floppy Disks
+
+- All software on DDP available on disk
+- Capacities from [[https://diroccovision.com/Coleco/adam/Pics/Expansion/525%20Disk%20Drive.jpg][160K]] to [[https://diroccovision.com/Coleco/adam/Pics/Expansion/MI%20Adam%20net%20Floppy.gif][1.44MB]]
+- Definitely faster than DDP
+- Attaches via [[file:disk-drive-back.jpg][AdamNet.]]
+- Booting Zaxxon
+  
+*** [[http://ann.hollowdreams.com/adamsupplies.html][Hard Disk]]
+
+- Larger
+- Much Faster than floppies or DDPs
+- Connect via Internal card or AdamNet
+- Handle CP/M or EOS volumes
+- Quick demo using AdamEm
+
+*** [[https://fujinet.online/wp-content/uploads/2022/03/ADAM-FujiNet-v1.0-CONFIG.jpg][Modern Solutions (ADE and FujiNet)]]
+
+- Connect via AdamNet
+- Uses SD cards
+- Mount images in one of four device IDs
+- Handles DDP, DSK, and ROMs
+- FujiNet adds network storage and applications
+- Quick boot of Buck Rogers over Internet
+
+*** Comparison of capacities
+
+- Adam thinks of media in 1024 byte blocks
+- DDP drives have 256 blocks
+- [[https://diroccovision.com/Coleco/adam/Pics/Expansion/525%20Disk%20Drive.jpg][Original Coleco drives have 160 blocks]]
+- [[https://content.invisioncic.com/r322239/monthly_08_2017/post-10892-0-07950100-1503737482.jpg][Micro Innovations 5¼ Floppy Drive had 320 blocks]]
+- [[https://content.invisioncic.com/r322239/monthly_08_2017/post-10892-0-27176300-1503737664.jpg][Micro Innovation 3½ Floppy Drive had 720 blocks]]
+- Micro Innovation also did a 1.44MB 3½ drive. 1440 blocks
+
+*** Filesystems
+
+**** EOS
+
+- Elementary
+- In ROM
+- Sequential
+- Only Contiguous blocks
+- FLAT FILESYSTEM
+- Last file on tape assumed to have rest of tape capacity
+- 12 Char Filenames
+  - 11 Char name
+  - 1 Char type
+- Pre-allocated
+- EOS 5 can do 4.3T volumes
+- EOS 6 can do 64MB volumes
+
+****  AJM File Manager Demo
+
+- Showing EOS file directories
+- Copying document from tape to disk
+- Showing that tapes
+**** [[https://diroccovision.com/Coleco/adam/Library/Coleco/CPM/CPM%20%207832.jpg][CP/M]]
+
+- CP/M Version 2.2
+- Supports 160K Disk
+- Supports 256K DDP
+- Supports 64K RAM Disk
+- Supports Printer
+- Supports AdamNet Serial Interface
+- Emulates VT-52 (H19) terminal
+- Scrolling 80 column window
+- Smart Key display
+- Thousands of CP/M programs
+- Includes transfer programs
+- Includes backup utility
+- Includes Formatter for disk/tape
+- Includes Sysgen
+- Includes Config
+- Can be patched for other capacities
+
+**** T-DOS
+
+- CP/M Replacement
+- By Tony Morehen and Guy Cousineau
+- 40 column text mode
+- 80 column virtual display
+- Supports more disk capacities
+- Supports Microfox IDE Hard Disk
+- Supports directories
+- Supports time-stamps
+- Supports EVE 80 column expansion
+- Supports MIB serial/parallel card
+
+** [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Slots/SLOT%203_1.gif][Expansion]]
+*** AdamNet
+
+- Two AdamNet ports
+  One in front
+  One on the left side
+  (Actually, the printer connection too)
+
+- [[https://i.ebayimg.com/images/g/674AAOSwiBZkixCq/s-l1200.jpg][Uses Standard 6P6C cross-wired cabling]]
+- [[file:disk-drive-back.jpg][Peripherals are daisy chained]]
+- [[https://i.ebayimg.com/images/g/THsAAOSw4NZbdTy-/s-l1600.jpg][Passive T-Adapters for more ports]]
+
+- 62,500 bits per second
+- One Wire for RX/TX
+
+- Inverted; open-collector
+  (the bus is high if all connected devices are high,
+  and the bus is low if any device drives a zero.)
+
+- Uses 6801's WAIT-for-break
+  to implement a multi device network.
+
+- 6801 DMA's into Z80 memory
+  via the MIOC
+  
+- [[file:disk-drive-front.jpg][Disk Drives]]
+- VDE
+- [[https://diroccovision.com/Coleco/adam/Expansion/FoxADE.jpg][ADE]]
+- [[https://fujinet.online/wp-content/uploads/2022/03/ADAM-FujiNet-v1.0-CONFIG.jpg][FujiNet]]
+- Printer
+
+*** [[file:right-expansion.jpg][Right slot]]
+
+- Exactly like ColecoVision Expansion slot
+- [[https://i.ytimg.com/vi/aYywqZp-uBY/maxresdefault.jpg][Expansion #1 for Atari VCS (2600)]]
+- [[https://thumbs.worthpoint.com/zoom/images3/1/0716/17/address-book-filer-auto-dialer-coleco_1_e6c852f8f9a143e8d6d3831ec60c6786.jpg][AutoDialer]]
+- [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Other/Orphanware%2080%20Column%20Video.gif][OrphanWare 80 Column]]
+- EVE SP-1
+- etc...
+
+*** Internal Slot 1
+
+- Limited I/O
+- Intended for AdamLink [[https://i.pinimg.com/736x/6c/48/c0/6c48c03e2950380ece9c468509343807--modem-instruments.jpg][MODEM]]
+- [[https://diroccovision.com/Coleco/adam/Pics/Cards/MI/MI%20Dual%20Serial.gif][MI Dual Serial Interface]]
+- [[https://diroccovision.com/Coleco/adam/Pics/Cards/MI/MI%20Powermate%20Host.jpg][MI and MicroFox IDE Hard Disk Adapters]]
+  
+*** Internal Slot 2
+
+- More I/O, some memory mapping
+- Originally intended for [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Coleco/French%20Card.jpg][Language Cards]]
+- Now used for I/O and [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/MicroFox/MF%20Memory.gif][memory addressors]]
+  to bridge an address pin to slot 3
+
+*** Internal Slot 3
+- Memory addressing, limited I/O
+- Originally intended for [[https://www.diroccovision.com/Coleco/adam/Pics/Cards/Exp%20Collage.jpg][64K RAM Expansion]]
+- Now used for larger memory cards, up to [[https://diroccovision.com/Coleco/adam/Pics/Cards/MicroFox/MF%201mb.gif][8MB]]
+* IV. Programming
 
 ** Overview
 
@@ -922,7 +952,7 @@ load_done:
 
 #+end_src
 
-* III. References
+* V. References
 
 Information:
 - http://www.diroccovision.com/
@@ -956,3 +986,7 @@ Programming:
 - https://www.github.com/tschak909/os7lib
 - https://www.github.com/tschak909/eoslib
 - https://www.github.com/tschak909/smartkeyslib
+
+Adapting Existing Audio Tapes:
+- http://adamarchive.org/archive/Technical/ADAM%20Mods/Audio%20Cassette%20Tape%20to%20a%20ADAM%20DDP%20Pack%21%21%20v2.2.pdf
+  
